@@ -14,6 +14,14 @@ WorkshopDL is self contained. It stores its data beside the executable, so extra
 Copyright (c) 2022-2026 noitavo. [License](LICENSE): CC BY-NC-SA 4.0.
 
 ---
+> [!WARNING]
+> This is the **only official repository** for **WorkshopDL**.
+>
+> Any third-party websites, repositories, or platforms claiming to distribute WorkshopDL are **unauthorized and are not affiliated with this project**. Such sources may distribute modified, malicious, or otherwise unsafe versions of the software.
+>
+> **For your security, only download WorkshopDL from this official GitHub repository.** Avoid unofficial download links, mirrors, and websites claiming to represent the project.
+
+---
 Thanks to [imwaitingnow](https://github.com/imwaitingnow/WorkshopDL) for maintaining WorkshopDL after my original repository and account were deleted.
 
 <b>This project is not affiliated with Valve.</b>
