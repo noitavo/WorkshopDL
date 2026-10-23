@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui version="4.0">
+ <class>BookmarksDialog</class>
+ <widget class="QDialog" name="BookmarksDialog">
+  <property name="windowTitle">
+   <string>Game bookmarks</string>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>500</width>
+    <height>440</height>
+   </rect>
+  </property>
+  <layout class="QVBoxLayout" name="layout" stretch="0,0,1,0,0">
+   <item>
+    <widget class="QLineEdit" name="filter">
+     <property name="placeholderText">
+      <string>Find a bookmark</string>
+     </property>
+     <property name="clearButtonEnabled">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="empty">
+     <property name="text">
+      <string>Add any game's App ID or Workshop link.</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+     <property name="textFormat">
+      <enum>Qt::PlainText</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QListWidget" name="list">
+     <property name="toolTip">
+      <string>Drag bookmarks to reorder</string>
+     </property>
+     <property name="dragDropMode">
+      <enum>QAbstractItemView::InternalMove</enum>
+     </property>
+     <property name="defaultDropAction">
+      <enum>Qt::MoveAction</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="tools">
+     <item>
+      <widget class="QPushButton" name="add">
+       <property name="text">
+        <string>Add game…</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="edit">
+       <property name="text">
+        <string>Edit…</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="remove">
+       <property name="text">
+        <string>Remove</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="toolsSpace">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint">
+        <size>
+         <width>20</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttons">
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Open|QDialogButtonBox::Close</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>filter</tabstop>
+  <tabstop>list</tabstop>
+  <tabstop>add</tabstop>
+  <tabstop>edit</tabstop>
+  <tabstop>remove</tabstop>
+  <tabstop>buttons</tabstop>
+ </tabstops>
+ <resources />
+ <connections />
+</ui>

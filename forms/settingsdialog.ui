@@ -1,0 +1,740 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui version="4.0">
+ <class>SettingsDialog</class>
+ <widget class="QDialog" name="SettingsDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>690</width>
+    <height>610</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Settings</string>
+  </property>
+  <layout class="QVBoxLayout" name="layout" stretch="1,0">
+   <item>
+    <widget class="QTabWidget" name="pages">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="general">
+      <attribute name="title">
+       <string>General</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="generalPageLayout">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QScrollArea" name="generalScroll">
+         <property name="frameShape">
+          <enum>QFrame::Shape::NoFrame</enum>
+         </property>
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <widget class="QWidget" name="generalContents">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>668</width>
+            <height>532</height>
+           </rect>
+          </property>
+          <layout class="QVBoxLayout" name="generalLayout">
+           <property name="spacing">
+            <number>10</number>
+           </property>
+           <property name="leftMargin">
+            <number>12</number>
+           </property>
+           <property name="topMargin">
+            <number>14</number>
+           </property>
+           <property name="rightMargin">
+            <number>12</number>
+           </property>
+           <property name="bottomMargin">
+            <number>12</number>
+           </property>
+           <item>
+            <widget class="QGroupBox" name="windowSettingsGroup">
+             <property name="title">
+              <string>Window</string>
+             </property>
+             <layout class="QVBoxLayout" name="windowSettingsGroupLayout">
+              <item>
+               <widget class="QCheckBox" name="remember">
+                <property name="text">
+                 <string>Remember last tab</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <layout class="QFormLayout" name="startupForm">
+                <property name="rowWrapPolicy">
+                 <enum>QFormLayout::WrapLongRows</enum>
+                </property>
+                <property name="fieldGrowthPolicy">
+                 <enum>QFormLayout::FieldGrowthPolicy::AllNonFixedFieldsGrow</enum>
+                </property>
+                <item row="0" column="0">
+                 <widget class="QLabel" name="startupLabel">
+                  <property name="text">
+                   <string>Startup tab</string>
+                  </property>
+                  <property name="textFormat">
+                   <enum>Qt::TextFormat::PlainText</enum>
+                  </property>
+                  <property name="wordWrap">
+                   <bool>true</bool>
+                  </property>
+                  <property name="buddy">
+                   <cstring>startup</cstring>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="1">
+                 <widget class="QComboBox" name="startup">
+                  <item>
+                   <property name="text">
+                    <string>Browser</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Manual</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Library</string>
+                   </property>
+                  </item>
+                  <item>
+                   <property name="text">
+                    <string>Mod Manager (Experimental)</string>
+                   </property>
+                  </item>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="rememberLayout">
+                <property name="text">
+                 <string>Remember window layout</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="separateSizes">
+                <property name="toolTip">
+                 <string>Remember separate window sizes for the browser and other tabs.</string>
+                </property>
+                <property name="text">
+                 <string>Separate browser window size</string>
+                </property>
+                <property name="checked">
+                 <bool>false</bool>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <widget class="QGroupBox" name="browserSettingsGroup">
+             <property name="title">
+              <string>Browser</string>
+             </property>
+             <layout class="QVBoxLayout" name="browserSettingsGroupLayout">
+              <item>
+               <widget class="QCheckBox" name="lastPage">
+                <property name="text">
+                 <string>Reopen last Workshop page</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="rememberZoom">
+                <property name="text">
+                 <string>Remember browser zoom</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="expandedTools">
+                <property name="text">
+                 <string>Expand queue tools</string>
+                </property>
+                <property name="checked">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QCheckBox" name="clip">
+                <property name="toolTip">
+                 <string>Downloads start manually.</string>
+                </property>
+                <property name="text">
+                 <string>Queue copied Workshop links</string>
+                </property>
+                <property name="checked">
+                 <bool>false</bool>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item>
+            <spacer name="generalSettingsSpace">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="downloads">
+      <attribute name="title">
+       <string>Downloads</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="downloadsPageLayout">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QScrollArea" name="downloadsScroll">
+         <property name="frameShape">
+          <enum>QFrame::Shape::NoFrame</enum>
+         </property>
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <widget class="QWidget" name="downloadsContents">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>668</width>
+            <height>532</height>
+           </rect>
+          </property>
+          <layout class="QVBoxLayout" name="downloadsLayout">
+           <property name="spacing">
+            <number>10</number>
+           </property>
+           <property name="leftMargin">
+            <number>12</number>
+           </property>
+           <property name="topMargin">
+            <number>14</number>
+           </property>
+           <property name="rightMargin">
+            <number>12</number>
+           </property>
+           <property name="bottomMargin">
+            <number>12</number>
+           </property>
+           <item>
+            <layout class="QFormLayout" name="downloadsForm">
+             <property name="rowWrapPolicy">
+              <enum>QFormLayout::WrapLongRows</enum>
+             </property>
+             <property name="fieldGrowthPolicy">
+              <enum>QFormLayout::FieldGrowthPolicy::AllNonFixedFieldsGrow</enum>
+             </property>
+             <item row="0" column="0">
+              <widget class="QLabel" name="directoryRowLabel">
+               <property name="buddy">
+                <cstring>directory</cstring>
+               </property>
+               <property name="text">
+                <string>Download folder</string>
+               </property>
+               <property name="textFormat">
+                <enum>Qt::TextFormat::PlainText</enum>
+               </property>
+               <property name="wordWrap">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <layout class="QHBoxLayout" name="directoryRow">
+               <item>
+                <widget class="QLineEdit" name="directory">
+                 <property name="placeholderText">
+                  <string />
+                 </property>
+                 <property name="clearButtonEnabled">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="choose">
+                 <property name="text">
+                  <string>Browse…</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="methodLabel">
+               <property name="text">
+                <string>Download method</string>
+               </property>
+               <property name="textFormat">
+                <enum>Qt::TextFormat::PlainText</enum>
+               </property>
+               <property name="wordWrap">
+                <bool>true</bool>
+               </property>
+               <property name="buddy">
+                <cstring>method</cstring>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QComboBox" name="method">
+               <property name="toolTip">
+                <string>Automatic tries SteamCMD, then SteamAPI. SteamAPI is available only for some items.</string>
+               </property>
+               <item>
+                <property name="text">
+                 <string>Automatic</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>SteamCMD</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>SteamAPI</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="validate">
+             <property name="text">
+              <string>Verify SteamCMD downloads</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="checkMods">
+             <property name="toolTip">
+              <string>Checks Workshop items. Download updates manually.</string>
+             </property>
+             <property name="text">
+              <string>Check mod updates at startup</string>
+             </property>
+             <property name="checked">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="dependencies">
+             <property name="toolTip">
+              <string>Requires a Steam Web API key.</string>
+             </property>
+             <property name="text">
+              <string>Check required items before downloading</string>
+             </property>
+             <property name="checked">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="after">
+             <property name="text">
+              <string>Open folder when finished</string>
+             </property>
+             <property name="checked">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="autoInstall">
+             <property name="toolTip">
+              <string>Uses saved mod folders. Enable mods in the game.</string>
+             </property>
+             <property name="text">
+              <string>Install downloads automatically</string>
+             </property>
+             <property name="checked">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="authentication">
+             <property name="text">
+              <string>Steam account…</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="downloadsSpace">
+             <property name="orientation">
+              <enum>Qt::Orientation::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="maintenance">
+      <attribute name="title">
+       <string>Maintenance</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="maintenancePageLayout">
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QScrollArea" name="maintenanceScroll">
+         <property name="frameShape">
+          <enum>QFrame::Shape::NoFrame</enum>
+         </property>
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <widget class="QWidget" name="maintenanceContents">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>668</width>
+            <height>532</height>
+           </rect>
+          </property>
+          <layout class="QVBoxLayout" name="maintenanceLayout">
+           <property name="spacing">
+            <number>10</number>
+           </property>
+           <property name="leftMargin">
+            <number>12</number>
+           </property>
+           <property name="topMargin">
+            <number>14</number>
+           </property>
+           <property name="rightMargin">
+            <number>12</number>
+           </property>
+           <property name="bottomMargin">
+            <number>12</number>
+           </property>
+           <item>
+            <layout class="QFormLayout" name="maintenanceForm">
+             <property name="rowWrapPolicy">
+              <enum>QFormLayout::WrapLongRows</enum>
+             </property>
+             <property name="fieldGrowthPolicy">
+              <enum>QFormLayout::FieldGrowthPolicy::AllNonFixedFieldsGrow</enum>
+             </property>
+             <item row="0" column="0">
+              <widget class="QLabel" name="steamRowLabel">
+               <property name="buddy">
+                <cstring>steam</cstring>
+               </property>
+               <property name="text">
+                <string>SteamCMD executable</string>
+               </property>
+               <property name="textFormat">
+                <enum>Qt::TextFormat::PlainText</enum>
+               </property>
+               <property name="wordWrap">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <layout class="QHBoxLayout" name="steamRow">
+               <item>
+                <widget class="QLineEdit" name="steam">
+                 <property name="placeholderText">
+                  <string />
+                 </property>
+                 <property name="clearButtonEnabled">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="steamBrowse">
+                 <property name="text">
+                  <string>Browse…</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="apiKeyLabel">
+               <property name="text">
+                <string>Steam Web API key</string>
+               </property>
+               <property name="textFormat">
+                <enum>Qt::TextFormat::PlainText</enum>
+               </property>
+               <property name="wordWrap">
+                <bool>true</bool>
+               </property>
+               <property name="buddy">
+                <cstring>apiKey</cstring>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QLineEdit" name="apiKey">
+               <property name="toolTip">
+                <string>Used for Steam metadata and required items. Saved as plain text in settings.ini.</string>
+               </property>
+               <property name="echoMode">
+                <enum>QLineEdit::EchoMode::Password</enum>
+               </property>
+               <property name="placeholderText">
+                <string>Optional</string>
+               </property>
+               <property name="clearButtonEnabled">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="updates">
+             <property name="text">
+              <string>Check weekly for application updates</string>
+             </property>
+             <property name="checked">
+              <bool>false</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="repair">
+             <property name="text">
+              <string>Repair SteamCMD…</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="cookies">
+             <property name="text">
+              <string>Clear browser cookies…</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="maintenanceSpace">
+             <property name="orientation">
+              <enum>Qt::Orientation::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="appearancePage">
+      <attribute name="title">
+       <string>Appearance</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="appearanceLayout">
+       <item>
+        <widget class="QGroupBox" name="appearanceGroup">
+         <property name="title">
+          <string>Theme</string>
+         </property>
+         <layout class="QFormLayout" name="appearanceForm">
+          <item row="0" column="0">
+           <widget class="QLabel" name="themeStyleLabel">
+            <property name="text">
+             <string>&amp;Style:</string>
+            </property>
+            <property name="buddy">
+             <cstring>themeStyle</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QComboBox" name="themeStyle" />
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="themeColorsLabel">
+            <property name="text">
+             <string>&amp;Colors:</string>
+            </property>
+            <property name="buddy">
+             <cstring>themeColors</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QComboBox" name="themeColors" />
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="themeAccentLabel">
+            <property name="text">
+             <string>&amp;Accent:</string>
+            </property>
+            <property name="buddy">
+             <cstring>themeAccent</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QPushButton" name="themeAccent" />
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="defaultAccent">
+         <property name="text">
+          <string>Use Windows accent color</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="appearanceRestart">
+         <property name="text">
+          <string>Appearance changes take effect after restart.</string>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="appearanceSpace">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttons">
+     <property name="standardButtons">
+      <set>QDialogButtonBox::StandardButton::Cancel|QDialogButtonBox::StandardButton::Save</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>pages</tabstop>
+  <tabstop>remember</tabstop>
+  <tabstop>startup</tabstop>
+  <tabstop>lastPage</tabstop>
+  <tabstop>rememberLayout</tabstop>
+  <tabstop>separateSizes</tabstop>
+  <tabstop>rememberZoom</tabstop>
+  <tabstop>expandedTools</tabstop>
+  <tabstop>clip</tabstop>
+  <tabstop>directory</tabstop>
+  <tabstop>choose</tabstop>
+  <tabstop>method</tabstop>
+  <tabstop>validate</tabstop>
+  <tabstop>checkMods</tabstop>
+  <tabstop>dependencies</tabstop>
+  <tabstop>after</tabstop>
+  <tabstop>autoInstall</tabstop>
+  <tabstop>authentication</tabstop>
+  <tabstop>steam</tabstop>
+  <tabstop>steamBrowse</tabstop>
+  <tabstop>apiKey</tabstop>
+  <tabstop>updates</tabstop>
+  <tabstop>repair</tabstop>
+  <tabstop>cookies</tabstop>
+  <tabstop>buttons</tabstop>
+ </tabstops>
+ <resources />
+ <connections />
+</ui>

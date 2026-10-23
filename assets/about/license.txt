@@ -1,0 +1,13 @@
+Copyright (c) 2022-2026 noitavo.
+
+WorkshopDL++ is licensed under the Creative Commons
+Attribution-NonCommercial-ShareAlike 4.0 International license
+(CC BY-NC-SA 4.0).
+
+https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+The full license text is included in LICENSE in the source repository
+and in licenses/CC-BY-NC-SA-4.0.txt in release packages.
+
+Third-party components retain their respective licenses.
+Third-party licenses are included in the licenses folder.

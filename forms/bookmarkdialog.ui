@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui version="4.0">
+ <class>BookmarkDialog</class>
+ <widget class="QDialog" name="BookmarkDialog">
+  <property name="windowTitle">
+   <string>Add game bookmark</string>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>480</width>
+    <height>160</height>
+   </rect>
+  </property>
+  <layout class="QVBoxLayout" name="layout">
+   <item>
+    <layout class="QFormLayout" name="bookmarkForm">
+     <property name="rowWrapPolicy">
+      <enum>QFormLayout::WrapLongRows</enum>
+     </property>
+     <property name="fieldGrowthPolicy">
+      <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+     </property>
+     <item row="0" column="0">
+      <widget class="QLabel" name="idFieldLabel">
+       <property name="text">
+        <string>&amp;Game</string>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::PlainText</enum>
+       </property>
+       <property name="buddy">
+        <cstring>idField</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QLineEdit" name="idField">
+       <property name="placeholderText">
+        <string>App ID or Workshop link</string>
+       </property>
+       <property name="clearButtonEnabled">
+        <bool>true</bool>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>330</width>
+         <height>0</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="nameFieldLabel">
+       <property name="text">
+        <string>&amp;Name</string>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::PlainText</enum>
+       </property>
+       <property name="buddy">
+        <cstring>nameField</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="nameField">
+       <property name="placeholderText">
+        <string>Game name (optional)</string>
+       </property>
+       <property name="clearButtonEnabled">
+        <bool>true</bool>
+       </property>
+       <property name="maxLength">
+        <number>120</number>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <spacer name="buttonSpacer">
+     <property name="orientation"><enum>Qt::Vertical</enum></property>
+     <property name="sizeHint"><size><width>0</width><height>0</height></size></property>
+    </spacer>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttons">
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Save|QDialogButtonBox::Cancel</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>idField</tabstop>
+  <tabstop>nameField</tabstop>
+  <tabstop>buttons</tabstop>
+ </tabstops>
+ <resources />
+ <connections />
+</ui>

@@ -1,0 +1,10 @@
+* text=auto
+*.cmd text eol=crlf
+*.bat text eol=crlf
+*.ps1 text eol=crlf
+*.cpp text eol=lf
+*.h text eol=lf
+*.pro text eol=lf
+*.png binary
+*.ico binary
+*.lib binary

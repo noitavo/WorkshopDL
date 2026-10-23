@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui version="4.0">
+ <class>CollectionDialog</class>
+ <widget class="QDialog" name="CollectionDialog">
+  <property name="windowTitle">
+   <string>Import collection</string>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>780</width>
+    <height>520</height>
+   </rect>
+  </property>
+  <layout class="QVBoxLayout" name="layout" stretch="0,0,1,0,0">
+   <item>
+    <widget class="QLabel" name="heading">
+     <property name="text">
+      <string />
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+     <property name="textFormat">
+      <enum>Qt::PlainText</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="previewStatus">
+     <property name="text">
+      <string />
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+     <property name="textFormat">
+      <enum>Qt::PlainText</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QListWidget" name="list" />
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="selectionRow">
+     <item>
+      <widget class="QPushButton" name="all">
+       <property name="text">
+        <string>Select all</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="none">
+       <property name="text">
+        <string>Select none</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="selectionSpace">
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+       <property name="sizeHint">
+        <size>
+         <width>20</width>
+         <height>20</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttons">
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Ok|QDialogButtonBox::Cancel</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>list</tabstop>
+  <tabstop>all</tabstop>
+  <tabstop>none</tabstop>
+  <tabstop>buttons</tabstop>
+ </tabstops>
+ <resources />
+ <connections />
+</ui>

@@ -1,0 +1,18 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<RCC>
+  <qresource prefix="/branding">
+    <file>workshopdl.png</file>
+  </qresource>
+  <qresource prefix="/material">
+    <file alias="back.svg">material/back.svg</file>
+    <file alias="bookmark.svg">material/bookmark.svg</file>
+    <file alias="browser.svg">material/browser.svg</file>
+    <file alias="copy.svg">material/copy.svg</file>
+    <file alias="folder.svg">material/folder.svg</file>
+    <file alias="forward.svg">material/forward.svg</file>
+    <file alias="home.svg">material/home.svg</file>
+    <file alias="reload.svg">material/reload.svg</file>
+    <file alias="stop.svg">material/stop.svg</file>
+    <file alias="LICENSE.txt">material/LICENSE.txt</file>
+  </qresource>
+</RCC>

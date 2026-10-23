@@ -1,0 +1,159 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui version="4.0">
+ <class>AccountDialog</class>
+ <widget class="QDialog" name="AccountDialog">
+  <property name="windowTitle">
+   <string>Steam account</string>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>440</width>
+    <height>260</height>
+   </rect>
+  </property>
+  <layout class="QVBoxLayout" name="layout">
+   <item>
+    <layout class="QFormLayout" name="accountForm">
+     <property name="rowWrapPolicy">
+      <enum>QFormLayout::WrapLongRows</enum>
+     </property>
+     <property name="fieldGrowthPolicy">
+      <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+     </property>
+     <item row="0" column="0">
+      <widget class="QLabel" name="modeLabel">
+       <property name="text">
+        <string>Download &amp;as</string>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::PlainText</enum>
+       </property>
+       <property name="buddy">
+        <cstring>mode</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QComboBox" name="mode">
+       <item>
+        <property name="text">
+         <string>Anonymous</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Steam account</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="userLabel">
+       <property name="text">
+        <string>&amp;Username</string>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::PlainText</enum>
+       </property>
+       <property name="buddy">
+        <cstring>user</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="user">
+       <property name="placeholderText">
+        <string />
+       </property>
+       <property name="clearButtonEnabled">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="passLabel">
+       <property name="text">
+        <string>&amp;Password</string>
+       </property>
+       <property name="wordWrap">
+        <bool>true</bool>
+       </property>
+       <property name="textFormat">
+        <enum>Qt::PlainText</enum>
+       </property>
+       <property name="buddy">
+        <cstring>pass</cstring>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QLineEdit" name="pass">
+       <property name="placeholderText">
+        <string>Leave blank to enter at sign-in</string>
+       </property>
+       <property name="clearButtonEnabled">
+        <bool>true</bool>
+       </property>
+       <property name="echoMode">
+        <enum>QLineEdit::Password</enum>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="remember">
+     <property name="text">
+      <string>Remember password</string>
+     </property>
+     <property name="toolTip">
+      <string>Stored in Windows Credential Manager.</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="note">
+     <property name="text">
+      <string>Some downloads require game ownership. Browser sign-in is separate.</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+     <property name="textFormat">
+      <enum>Qt::PlainText</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <spacer name="buttonSpacer">
+     <property name="orientation"><enum>Qt::Vertical</enum></property>
+     <property name="sizeHint"><size><width>0</width><height>0</height></size></property>
+    </spacer>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttons">
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Save|QDialogButtonBox::Cancel</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>mode</tabstop>
+  <tabstop>user</tabstop>
+  <tabstop>pass</tabstop>
+  <tabstop>remember</tabstop>
+  <tabstop>buttons</tabstop>
+ </tabstops>
+ <resources />
+ <connections />
+</ui>

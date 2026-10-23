@@ -1,0 +1,1587 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1280</width>
+    <height>820</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>0</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="acceptDrops">
+   <bool>true</bool>
+  </property>
+  <property name="windowTitle">
+   <string>WorkshopDL++</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <layout class="QVBoxLayout" name="centralLayout" stretch="1">
+    <property name="spacing">
+     <number>6</number>
+    </property>
+    <property name="leftMargin">
+     <number>6</number>
+    </property>
+    <property name="topMargin">
+     <number>4</number>
+    </property>
+    <property name="rightMargin">
+     <number>6</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QTabWidget" name="tabs">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="browserPage">
+       <attribute name="title">
+        <string>Browser</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="browserLayout" stretch="0,1">
+        <property name="spacing">
+         <number>8</number>
+        </property>
+        <property name="leftMargin">
+         <number>6</number>
+        </property>
+        <property name="topMargin">
+         <number>6</number>
+        </property>
+        <property name="rightMargin">
+         <number>6</number>
+        </property>
+        <property name="bottomMargin">
+         <number>6</number>
+        </property>
+        <item>
+         <layout class="QHBoxLayout" name="navigationLayout" stretch="0,0,0,0,1,0,0,0,0,0,0">
+          <property name="spacing">
+           <number>3</number>
+          </property>
+          <item>
+           <widget class="QToolButton" name="backButton">
+            <property name="toolTip">
+             <string>Back (Alt+Left)</string>
+            </property>
+            <property name="accessibleName">
+             <string>Back (Alt+Left)</string>
+            </property>
+            <property name="text">
+             <string>‹</string>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>20</width>
+              <height>20</height>
+             </size>
+            </property>
+            <property name="autoRaise">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QToolButton" name="forwardButton">
+            <property name="toolTip">
+             <string>Forward (Alt+Right)</string>
+            </property>
+            <property name="accessibleName">
+             <string>Forward (Alt+Right)</string>
+            </property>
+            <property name="text">
+             <string>›</string>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>20</width>
+              <height>20</height>
+             </size>
+            </property>
+            <property name="autoRaise">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QToolButton" name="homeButton">
+            <property name="toolTip">
+             <string>Steam Workshop home</string>
+            </property>
+            <property name="accessibleName">
+             <string>Steam Workshop home</string>
+            </property>
+            <property name="text">
+             <string>Home</string>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>20</width>
+              <height>20</height>
+             </size>
+            </property>
+            <property name="autoRaise">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QToolButton" name="reloadButton">
+            <property name="toolTip">
+             <string>Reload (F5)</string>
+            </property>
+            <property name="accessibleName">
+             <string>Reload (F5)</string>
+            </property>
+            <property name="text">
+             <string>Reload</string>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>20</width>
+              <height>20</height>
+             </size>
+            </property>
+            <property name="autoRaise">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLineEdit" name="address">
+            <property name="accessibleName">
+             <string>Browser address</string>
+            </property>
+            <property name="placeholderText">
+             <string>Steam Workshop address</string>
+            </property>
+            <property name="clearButtonEnabled">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QToolButton" name="bookmarksButton">
+            <property name="toolTip">
+             <string>Saved game Workshops</string>
+            </property>
+            <property name="accessibleName">
+             <string>Saved game Workshops</string>
+            </property>
+            <property name="text">
+             <string>Bookmarks</string>
+            </property>
+            <property name="popupMode">
+             <enum>QToolButton::ToolButtonPopupMode::InstantPopup</enum>
+            </property>
+            <property name="autoRaise">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QToolButton" name="copyPageLink">
+            <property name="text">
+             <string>Copy link</string>
+            </property>
+            <property name="autoRaise">
+             <bool>true</bool>
+            </property>
+            <property name="accessibleName">
+             <string>Copy link</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QToolButton" name="openPageBrowser">
+            <property name="text">
+             <string>Open browser</string>
+            </property>
+            <property name="autoRaise">
+             <bool>true</bool>
+            </property>
+            <property name="accessibleName">
+             <string>Open browser</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="fitPageWidth">
+            <property name="text">
+             <string>Fit to width</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="zoomLabel">
+            <property name="text">
+             <string>&amp;Zoom:</string>
+            </property>
+            <property name="buddy">
+             <cstring>browserZoom</cstring>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="browserZoom">
+            <property name="accessibleName">
+             <string>Page zoom</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QSplitter" name="browserSplitter">
+          <property name="orientation">
+           <enum>Qt::Orientation::Horizontal</enum>
+          </property>
+          <property name="handleWidth">
+           <number>7</number>
+          </property>
+          <property name="childrenCollapsible">
+           <bool>false</bool>
+          </property>
+          <widget class="QWidget" name="browserViewport">
+           <layout class="QVBoxLayout" name="viewportLayout">
+            <property name="leftMargin">
+             <number>0</number>
+            </property>
+            <property name="topMargin">
+             <number>0</number>
+            </property>
+            <property name="rightMargin">
+             <number>0</number>
+            </property>
+            <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="BrowserView" name="web" native="true">
+              <property name="minimumSize">
+               <size>
+                <width>320</width>
+                <height>240</height>
+               </size>
+              </property>
+              <property name="focusPolicy">
+               <enum>Qt::FocusPolicy::StrongFocus</enum>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QScrollArea" name="browserScroll">
+           <property name="frameShape">
+            <enum>QFrame::Shape::NoFrame</enum>
+           </property>
+           <property name="horizontalScrollBarPolicy">
+            <enum>Qt::ScrollBarPolicy::ScrollBarAlwaysOff</enum>
+           </property>
+           <property name="widgetResizable">
+            <bool>true</bool>
+           </property>
+           <widget class="QWidget" name="browserPanel">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>0</y>
+              <width>544</width>
+              <height>519</height>
+             </rect>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>300</width>
+              <height>0</height>
+             </size>
+            </property>
+            <layout class="QVBoxLayout" name="browserPanelLayout" stretch="0,1">
+             <property name="leftMargin">
+              <number>12</number>
+             </property>
+             <property name="topMargin">
+              <number>8</number>
+             </property>
+             <property name="rightMargin">
+              <number>4</number>
+             </property>
+             <property name="bottomMargin">
+              <number>4</number>
+             </property>
+             <item>
+              <widget class="QGroupBox" name="browserItemPanel">
+               <layout class="QVBoxLayout" name="itemLayout">
+                <item>
+                 <widget class="QLabel" name="pageTitle">
+                  <property name="font">
+                   <font>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="text">
+                   <string>Steam Workshop</string>
+                  </property>
+                  <property name="textFormat">
+                   <enum>Qt::TextFormat::PlainText</enum>
+                  </property>
+                  <property name="wordWrap">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QLabel" name="pageStatus">
+                  <property name="text">
+                   <string>Open an item or collection to download it.</string>
+                  </property>
+                  <property name="textFormat">
+                   <enum>Qt::TextFormat::PlainText</enum>
+                  </property>
+                  <property name="wordWrap">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="itemActions">
+                  <item>
+                   <widget class="QPushButton" name="browserAdd">
+                    <property name="text">
+                     <string>Add to queue</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="browserDownload">
+                    <property name="text">
+                     <string>Download now</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+               </layout>
+               <property name="title">
+                <string>Workshop item</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QGroupBox" name="browserQueueGroup">
+               <layout class="QVBoxLayout" name="browserQueueLayout" stretch="0,0,1,0,0,0,0,0,0">
+                <property name="spacing">
+                 <number>8</number>
+                </property>
+                <item>
+                 <layout class="QHBoxLayout" name="queueHeader">
+                  <item>
+                   <widget class="QLabel" name="browserCount">
+                    <property name="text">
+                     <string />
+                    </property>
+                    <property name="textFormat">
+                     <enum>Qt::TextFormat::PlainText</enum>
+                    </property>
+                    <property name="wordWrap">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <spacer name="queueHeaderSpace">
+                    <property name="orientation">
+                     <enum>Qt::Orientation::Horizontal</enum>
+                    </property>
+                    <property name="sizeHint" stdset="0">
+                     <size>
+                      <width>20</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </spacer>
+                  </item>
+                  <item>
+                   <widget class="QToolButton" name="queueMenuButton">
+                    <property name="toolTip">
+                     <string>Queue actions</string>
+                    </property>
+                    <property name="accessibleName">
+                     <string>Queue actions</string>
+                    </property>
+                    <property name="popupMode">
+                     <enum>QToolButton::ToolButtonPopupMode::InstantPopup</enum>
+                    </property>
+                    <property name="autoRaise">
+                     <bool>true</bool>
+                    </property>
+                    <property name="text">
+                     <string>Queue actions</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <widget class="QLabel" name="emptyTitle">
+                  <property name="textFormat">
+                   <enum>Qt::TextFormat::PlainText</enum>
+                  </property>
+                  <property name="wordWrap">
+                   <bool>true</bool>
+                  </property>
+                  <property name="text">
+                   <string>Queue is empty. Add Workshop links to begin.</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignLeft|Qt::AlignVCenter</set>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QTableView" name="browserQueue">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>110</height>
+                   </size>
+                  </property>
+                  <property name="contextMenuPolicy">
+                   <enum>Qt::ContextMenuPolicy::CustomContextMenu</enum>
+                  </property>
+                  <property name="editTriggers">
+                   <set>QAbstractItemView::EditTrigger::NoEditTriggers</set>
+                  </property>
+                  <property name="alternatingRowColors">
+                   <bool>true</bool>
+                  </property>
+                  <property name="selectionMode">
+                   <enum>QAbstractItemView::SelectionMode::ExtendedSelection</enum>
+                  </property>
+                  <property name="selectionBehavior">
+                   <enum>QAbstractItemView::SelectionBehavior::SelectRows</enum>
+                  </property>
+                  <property name="showGrid">
+                   <bool>false</bool>
+                  </property>
+                  <property name="wordWrap">
+                   <bool>false</bool>
+                  </property>
+                  <attribute name="verticalHeaderVisible">
+                   <bool>false</bool>
+                  </attribute>
+                  <attribute name="verticalHeaderDefaultSectionSize">
+                   <number>28</number>
+                  </attribute>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="browserStart">
+                  <property name="toolTip">
+                   <string>Download ready items (Ctrl+Enter)</string>
+                  </property>
+                  <property name="text">
+                   <string>Download queue</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="selectionActions">
+                  <item>
+                   <widget class="QPushButton" name="browserSelected">
+                    <property name="text">
+                     <string>Download selected</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="browserRemove">
+                    <property name="text">
+                     <string>Remove</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <widget class="QPushButton" name="browserRetry">
+                  <property name="text">
+                   <string>Retry failed</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <layout class="QHBoxLayout" name="runActions">
+                  <item>
+                   <widget class="QPushButton" name="browserStop">
+                    <property name="text">
+                     <string>Stop after current</string>
+                    </property>
+                    <property name="checkable">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QPushButton" name="browserCancel">
+                    <property name="text">
+                     <string>Cancel</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </item>
+                <item>
+                 <widget class="QToolButton" name="queueToolsToggle">
+                  <property name="toolTip">
+                   <string>Show queue tools</string>
+                  </property>
+                  <property name="accessibleName">
+                   <string>Show queue tools</string>
+                  </property>
+                  <property name="text">
+                   <string>Queue options</string>
+                  </property>
+                  <property name="checkable">
+                   <bool>true</bool>
+                  </property>
+                  <property name="toolButtonStyle">
+                   <enum>Qt::ToolButtonStyle::ToolButtonTextBesideIcon</enum>
+                  </property>
+                  <property name="autoRaise">
+                   <bool>true</bool>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QWidget" name="browserAdvanced">
+                  <layout class="QGridLayout" name="queueToolsLayout">
+                   <property name="leftMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="topMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="rightMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="bottomMargin">
+                    <number>0</number>
+                   </property>
+                   <property name="spacing">
+                    <number>8</number>
+                   </property>
+                   <item row="0" column="0">
+                    <widget class="QPushButton" name="pasteLinksButton">
+                     <property name="text">
+                      <string>Paste links…</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="1">
+                    <widget class="QPushButton" name="queueDetailsButton">
+                     <property name="text">
+                      <string>Queue details</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="0">
+                    <widget class="QPushButton" name="moveUpButton">
+                     <property name="text">
+                      <string>Move up</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="1">
+                    <widget class="QPushButton" name="moveDownButton">
+                     <property name="text">
+                      <string>Move down</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="0">
+                    <widget class="QPushButton" name="clearCompletedButton">
+                     <property name="text">
+                      <string>Clear completed</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+               </layout>
+               <property name="title">
+                <string>Download queue</string>
+               </property>
+              </widget>
+             </item>
+             <property name="spacing">
+              <number>6</number>
+             </property>
+            </layout>
+           </widget>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="manualPage">
+       <attribute name="title">
+        <string>Manual</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="manualLayout" stretch="0,1">
+        <property name="spacing">
+         <number>8</number>
+        </property>
+        <property name="leftMargin">
+         <number>8</number>
+        </property>
+        <property name="topMargin">
+         <number>8</number>
+        </property>
+        <property name="rightMargin">
+         <number>8</number>
+        </property>
+        <property name="bottomMargin">
+         <number>8</number>
+        </property>
+        <item>
+         <widget class="QGroupBox" name="entryBox">
+          <property name="title">
+           <string>Add Workshop items</string>
+          </property>
+          <layout class="QVBoxLayout" name="entryLayout">
+           <item>
+            <layout class="QHBoxLayout" name="entryRow" stretch="1,0">
+             <item>
+              <widget class="QLineEdit" name="input">
+               <property name="placeholderText">
+                <string>Workshop link, collection link, or item ID</string>
+               </property>
+               <property name="clearButtonEnabled">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pasteButton">
+               <property name="text">
+                <string>Paste</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="entryActions">
+             <item>
+              <widget class="QPushButton" name="downloadNowButton">
+               <property name="text">
+                <string>Download now</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="addToQueueButton">
+               <property name="text">
+                <string>Add to queue</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="entrySpace">
+               <property name="orientation">
+                <enum>Qt::Orientation::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="queueBox">
+          <property name="title">
+           <string>Download queue</string>
+          </property>
+          <layout class="QVBoxLayout" name="manualQueueLayout" stretch="0,1,0,0">
+           <item>
+            <layout class="QHBoxLayout" name="summaryRow" stretch="1,0">
+             <item>
+              <widget class="QLabel" name="summary">
+               <property name="text">
+                <string />
+               </property>
+               <property name="textFormat">
+                <enum>Qt::TextFormat::PlainText</enum>
+               </property>
+               <property name="wordWrap">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="collectionButton">
+               <property name="text">
+                <string>Collection…</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QTableView" name="queueView">
+             <property name="contextMenuPolicy">
+              <enum>Qt::ContextMenuPolicy::CustomContextMenu</enum>
+             </property>
+             <property name="editTriggers">
+              <set>QAbstractItemView::EditTrigger::NoEditTriggers</set>
+             </property>
+             <property name="alternatingRowColors">
+              <bool>true</bool>
+             </property>
+             <property name="selectionMode">
+              <enum>QAbstractItemView::SelectionMode::ExtendedSelection</enum>
+             </property>
+             <property name="selectionBehavior">
+              <enum>QAbstractItemView::SelectionBehavior::SelectRows</enum>
+             </property>
+             <property name="showGrid">
+              <bool>false</bool>
+             </property>
+             <property name="wordWrap">
+              <bool>false</bool>
+             </property>
+             <attribute name="verticalHeaderVisible">
+              <bool>false</bool>
+             </attribute>
+             <attribute name="verticalHeaderDefaultSectionSize">
+              <number>28</number>
+             </attribute>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="details">
+             <property name="text">
+              <string>Select an item for details.</string>
+             </property>
+             <property name="textFormat">
+              <enum>Qt::TextFormat::PlainText</enum>
+             </property>
+             <property name="wordWrap">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="manualRunRow">
+             <item>
+              <widget class="QToolButton" name="manualQueueTools">
+               <property name="toolTip">
+                <string />
+               </property>
+               <property name="accessibleName">
+                <string />
+               </property>
+               <property name="text">
+                <string>Queue actions</string>
+               </property>
+               <property name="popupMode">
+                <enum>QToolButton::ToolButtonPopupMode::InstantPopup</enum>
+               </property>
+               <property name="autoRaise">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="manualRunSpace">
+               <property name="orientation">
+                <enum>Qt::Orientation::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>20</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QPushButton" name="cancelButton">
+               <property name="text">
+                <string>Cancel</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="stopButton">
+               <property name="text">
+                <string>Stop after current</string>
+               </property>
+               <property name="checkable">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="startButton">
+               <property name="text">
+                <string>Download queue</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="libraryPage">
+       <attribute name="title">
+        <string>Library</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="libraryLayout" stretch="0,0,1,0">
+        <property name="leftMargin">
+         <number>8</number>
+        </property>
+        <property name="topMargin">
+         <number>8</number>
+        </property>
+        <property name="rightMargin">
+         <number>8</number>
+        </property>
+        <property name="bottomMargin">
+         <number>8</number>
+        </property>
+        <item>
+         <layout class="QHBoxLayout" name="libraryFilters" stretch="1,0,0">
+          <item>
+           <widget class="QLineEdit" name="search">
+            <property name="placeholderText">
+             <string>Find downloaded items</string>
+            </property>
+            <property name="clearButtonEnabled">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QComboBox" name="libraryGameFilter">
+            <property name="accessibleName">
+             <string>Filter downloaded items by game</string>
+            </property>
+            <property name="maxVisibleItems">
+             <number>10</number>
+            </property>
+            <property name="sizeAdjustPolicy">
+             <enum>QComboBox::SizeAdjustPolicy::AdjustToMinimumContentsLengthWithIcon</enum>
+            </property>
+            <property name="minimumContentsLength">
+             <number>16</number>
+            </property>
+            <item>
+             <property name="text">
+              <string>All games</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="updatesOnly">
+            <property name="text">
+             <string>Updates / missing files only</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="libraryActions">
+          <item>
+           <widget class="QPushButton" name="checkUpdatesButton">
+            <property name="text">
+             <string>Check updates</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="updateSelectedButton">
+            <property name="text">
+             <string>Update selected</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="openLibraryFolderButton">
+            <property name="text">
+             <string>Open folder</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="workshopPageButton">
+            <property name="text">
+             <string>Workshop page</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="installButton">
+            <property name="text">
+             <string>Install…</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="libraryActionsSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint">
+             <size>
+              <width>0</width>
+              <height>0</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QTableView" name="libraryView">
+          <property name="contextMenuPolicy">
+           <enum>Qt::ContextMenuPolicy::CustomContextMenu</enum>
+          </property>
+          <property name="editTriggers">
+           <set>QAbstractItemView::EditTrigger::NoEditTriggers</set>
+          </property>
+          <property name="alternatingRowColors">
+           <bool>true</bool>
+          </property>
+          <property name="selectionMode">
+           <enum>QAbstractItemView::SelectionMode::ExtendedSelection</enum>
+          </property>
+          <property name="selectionBehavior">
+           <enum>QAbstractItemView::SelectionBehavior::SelectRows</enum>
+          </property>
+          <property name="showGrid">
+           <bool>false</bool>
+          </property>
+          <property name="wordWrap">
+           <bool>false</bool>
+          </property>
+          <attribute name="verticalHeaderVisible">
+           <bool>false</bool>
+          </attribute>
+          <attribute name="verticalHeaderDefaultSectionSize">
+           <number>28</number>
+          </attribute>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="libraryBottomRow">
+          <item>
+           <widget class="QPushButton" name="importFolderButton">
+            <property name="text">
+             <string>Import mod folder…</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="importPackageButton">
+            <property name="text">
+             <string>Import mod package…</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="libraryBottomSpace">
+            <property name="orientation">
+             <enum>Qt::Orientation::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="removeRecordButton">
+            <property name="text">
+             <string>Remove record</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="deleteFilesButton">
+            <property name="text">
+             <string>Delete files…</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="installedPage">
+       <attribute name="title">
+        <string>Mod Manager (Experimental)</string>
+       </attribute>
+       <attribute name="toolTip">
+        <string>Install, enable and manage mods for supported games</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="installedLayout" stretch="0,1">
+        <property name="leftMargin">
+         <number>8</number>
+        </property>
+        <property name="topMargin">
+         <number>8</number>
+        </property>
+        <property name="rightMargin">
+         <number>8</number>
+        </property>
+        <property name="bottomMargin">
+         <number>8</number>
+        </property>
+        <item>
+         <widget class="QListWidget" name="modGames">
+          <property name="minimumSize">
+           <size>
+            <width>190</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>235</width>
+            <height>16777215</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="installedMainLayout" stretch="0,0,1,0">
+          <item>
+           <layout class="QHBoxLayout" name="installedToolbar">
+            <item>
+             <widget class="QPushButton" name="refreshInstalledButton">
+              <property name="text">
+               <string>Refresh</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="modActivation">
+              <property name="text">
+               <string>Activation…</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="modLauncher">
+              <property name="text">
+               <string>Launch game</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="installedToolbarSpace">
+              <property name="orientation">
+               <enum>Qt::Orientation::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>20</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QPushButton" name="openInstalledFolderButton">
+              <property name="text">
+               <string>Open folder</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="toggleInstalledButton">
+              <property name="text">
+               <string>Enable / disable…</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="uninstallButton">
+              <property name="text">
+               <string>Uninstall…</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QLabel" name="modFolder">
+            <property name="text">
+             <string />
+            </property>
+            <property name="textFormat">
+             <enum>Qt::TextFormat::PlainText</enum>
+            </property>
+            <property name="wordWrap">
+             <bool>true</bool>
+            </property>
+            <property name="textInteractionFlags">
+             <set>Qt::TextInteractionFlag::TextSelectableByMouse</set>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QTableWidget" name="installedView">
+            <property name="editTriggers">
+             <set>QAbstractItemView::EditTrigger::NoEditTriggers</set>
+            </property>
+            <property name="alternatingRowColors">
+             <bool>true</bool>
+            </property>
+            <property name="selectionMode">
+             <enum>QAbstractItemView::SelectionMode::ExtendedSelection</enum>
+            </property>
+            <property name="selectionBehavior">
+             <enum>QAbstractItemView::SelectionBehavior::SelectRows</enum>
+            </property>
+            <property name="showGrid">
+             <bool>false</bool>
+            </property>
+            <property name="wordWrap">
+             <bool>false</bool>
+            </property>
+            <attribute name="verticalHeaderVisible">
+             <bool>false</bool>
+            </attribute>
+            <attribute name="verticalHeaderDefaultSectionSize">
+             <number>28</number>
+            </attribute>
+            <column>
+             <property name="text">
+              <string>Mod</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Activation</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Files</string>
+             </property>
+            </column>
+            <column>
+             <property name="text">
+              <string>Destination</string>
+             </property>
+            </column>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="installedNote">
+            <property name="text">
+             <string />
+            </property>
+            <property name="textFormat">
+             <enum>Qt::TextFormat::PlainText</enum>
+            </property>
+            <property name="wordWrap">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1219</width>
+     <height>21</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="fileMenu">
+    <property name="title">
+     <string>&amp;File</string>
+    </property>
+    <addaction name="actionAddLinks" />
+    <addaction name="actionImportLinks" />
+    <addaction name="actionExportQueue" />
+    <addaction name="separator" />
+    <addaction name="actionOpenDownloads" />
+    <addaction name="separator" />
+    <addaction name="actionExit" />
+   </widget>
+   <widget class="QMenu" name="downloadsMenu">
+    <property name="title">
+     <string>&amp;Downloads</string>
+    </property>
+    <widget class="QMenu" name="methodMenu">
+     <property name="title">
+      <string>Download method</string>
+     </property>
+     <addaction name="actionAutomatic" />
+     <addaction name="separator" />
+     <addaction name="actionSteamcmd" />
+     <addaction name="actionSteamApi" />
+    </widget>
+    <widget class="QMenu" name="maintenanceMenu">
+     <property name="title">
+      <string>Maintenance</string>
+     </property>
+     <addaction name="actionRecover" />
+     <addaction name="actionCleanCache" />
+     <addaction name="separator" />
+     <addaction name="actionGameTools" />
+    </widget>
+    <addaction name="actionStartQueue" />
+    <addaction name="actionDownloadSelected" />
+    <addaction name="actionStopAfter" />
+    <addaction name="actionCancelDownload" />
+    <addaction name="separator" />
+    <addaction name="actionRequiredItems" />
+    <addaction name="separator" />
+    <addaction name="methodMenu" />
+    <addaction name="accountAction" />
+    <addaction name="separator" />
+    <addaction name="actionHistory" />
+    <addaction name="maintenanceMenu" />
+   </widget>
+   <widget class="QMenu" name="bookmarksMenu">
+    <property name="title">
+     <string>&amp;Bookmarks</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="viewMenu">
+    <property name="title">
+     <string>&amp;View</string>
+    </property>
+    <addaction name="actionBrowser" />
+    <addaction name="actionManual" />
+    <addaction name="actionLibrary" />
+    <addaction name="separator" />
+    <addaction name="actionModManager" />
+    <addaction name="separator" />
+    <addaction name="actionActivityLog" />
+   </widget>
+   <widget class="QMenu" name="helpMenu">
+    <property name="title">
+     <string>&amp;Help</string>
+    </property>
+    <addaction name="actionGettingStarted" />
+    <addaction name="actionGameSupport" />
+    <addaction name="actionSteamcmdDocs" />
+    <addaction name="separator" />
+    <addaction name="actionCheckUpdates" />
+    <addaction name="separator" />
+    <addaction name="actionAbout" />
+   </widget>
+   <addaction name="fileMenu" />
+   <addaction name="downloadsMenu" />
+   <addaction name="bookmarksMenu" />
+   <addaction name="viewMenu" />
+   <addaction name="actionSettings" />
+   <addaction name="helpMenu" />
+  </widget>
+  <widget class="QStatusBar" name="statusbar" />
+  <action name="actionAddLinks">
+   <property name="text">
+    <string>Add links…</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Shift+V</string>
+   </property>
+  </action>
+  <action name="actionImportLinks">
+   <property name="text">
+    <string>Import links…</string>
+   </property>
+  </action>
+  <action name="actionExportQueue">
+   <property name="text">
+    <string>Export queue…</string>
+   </property>
+  </action>
+  <action name="actionOpenDownloads">
+   <property name="text">
+    <string>Open download folder</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>E&amp;xit</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+F4</string>
+   </property>
+  </action>
+  <action name="actionAutomatic">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Automatic</string>
+   </property>
+  </action>
+  <action name="actionSteamcmd">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>SteamCMD</string>
+   </property>
+  </action>
+  <action name="actionSteamApi">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>SteamAPI</string>
+   </property>
+  </action>
+  <action name="actionRecover">
+   <property name="text">
+    <string>Find downloaded files…</string>
+   </property>
+  </action>
+  <action name="actionCleanCache">
+   <property name="text">
+    <string>Clean cache…</string>
+   </property>
+  </action>
+  <action name="actionGameTools">
+   <property name="text">
+    <string>Garry's Mod tools…</string>
+   </property>
+  </action>
+  <action name="actionStartQueue">
+   <property name="text">
+    <string>Start queue</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Enter</string>
+   </property>
+  </action>
+  <action name="actionDownloadSelected">
+   <property name="text">
+    <string>Download selected</string>
+   </property>
+  </action>
+  <action name="actionStopAfter">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Stop after current</string>
+   </property>
+  </action>
+  <action name="actionCancelDownload">
+   <property name="text">
+    <string>Cancel download</string>
+   </property>
+  </action>
+  <action name="actionRequiredItems">
+   <property name="text">
+    <string>Required items…</string>
+   </property>
+  </action>
+  <action name="accountAction">
+   <property name="text">
+    <string>Steam account…</string>
+   </property>
+  </action>
+  <action name="actionHistory">
+   <property name="text">
+    <string>History…</string>
+   </property>
+  </action>
+  <action name="actionBrowser">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Browser</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+1</string>
+   </property>
+  </action>
+  <action name="actionManual">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Manual</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+2</string>
+   </property>
+  </action>
+  <action name="actionLibrary">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Library</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+3</string>
+   </property>
+  </action>
+  <action name="actionModManager">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Mod Manager (Experimental)</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+4</string>
+   </property>
+  </action>
+  <action name="actionActivityLog">
+   <property name="text">
+    <string>Activity log…</string>
+   </property>
+  </action>
+  <action name="actionGettingStarted">
+   <property name="text">
+    <string>Getting started</string>
+   </property>
+  </action>
+  <action name="actionGameSupport">
+   <property name="text">
+    <string>Game support</string>
+   </property>
+  </action>
+  <action name="actionSteamcmdDocs">
+   <property name="text">
+    <string>SteamCMD documentation</string>
+   </property>
+  </action>
+  <action name="actionCheckUpdates">
+   <property name="text">
+    <string>Check for updates…</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+  <action name="actionSettings">
+   <property name="text">
+    <string>&amp;Settings…</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+,</string>
+   </property>
+  </action>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>BrowserView</class>
+   <extends>QWidget</extends>
+   <header>webview.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <tabstops>
+  <tabstop>tabs</tabstop>
+  <tabstop>backButton</tabstop>
+  <tabstop>forwardButton</tabstop>
+  <tabstop>homeButton</tabstop>
+  <tabstop>reloadButton</tabstop>
+  <tabstop>address</tabstop>
+  <tabstop>bookmarksButton</tabstop>
+  <tabstop>copyPageLink</tabstop>
+  <tabstop>openPageBrowser</tabstop>
+  <tabstop>fitPageWidth</tabstop>
+  <tabstop>browserZoom</tabstop>
+  <tabstop>web</tabstop>
+  <tabstop>browserAdd</tabstop>
+  <tabstop>browserDownload</tabstop>
+  <tabstop>queueMenuButton</tabstop>
+  <tabstop>browserQueue</tabstop>
+  <tabstop>browserStart</tabstop>
+  <tabstop>browserSelected</tabstop>
+  <tabstop>browserRemove</tabstop>
+  <tabstop>browserRetry</tabstop>
+  <tabstop>browserStop</tabstop>
+  <tabstop>browserCancel</tabstop>
+  <tabstop>queueToolsToggle</tabstop>
+  <tabstop>pasteLinksButton</tabstop>
+  <tabstop>queueDetailsButton</tabstop>
+  <tabstop>moveUpButton</tabstop>
+  <tabstop>moveDownButton</tabstop>
+  <tabstop>clearCompletedButton</tabstop>
+  <tabstop>input</tabstop>
+  <tabstop>pasteButton</tabstop>
+  <tabstop>downloadNowButton</tabstop>
+  <tabstop>addToQueueButton</tabstop>
+  <tabstop>collectionButton</tabstop>
+  <tabstop>queueView</tabstop>
+  <tabstop>manualQueueTools</tabstop>
+  <tabstop>cancelButton</tabstop>
+  <tabstop>stopButton</tabstop>
+  <tabstop>startButton</tabstop>
+  <tabstop>search</tabstop>
+  <tabstop>libraryGameFilter</tabstop>
+  <tabstop>updatesOnly</tabstop>
+  <tabstop>checkUpdatesButton</tabstop>
+  <tabstop>updateSelectedButton</tabstop>
+  <tabstop>openLibraryFolderButton</tabstop>
+  <tabstop>workshopPageButton</tabstop>
+  <tabstop>installButton</tabstop>
+  <tabstop>libraryView</tabstop>
+  <tabstop>importFolderButton</tabstop>
+  <tabstop>importPackageButton</tabstop>
+  <tabstop>removeRecordButton</tabstop>
+  <tabstop>deleteFilesButton</tabstop>
+  <tabstop>modGames</tabstop>
+  <tabstop>refreshInstalledButton</tabstop>
+  <tabstop>modActivation</tabstop>
+  <tabstop>modLauncher</tabstop>
+  <tabstop>openInstalledFolderButton</tabstop>
+  <tabstop>toggleInstalledButton</tabstop>
+  <tabstop>uninstallButton</tabstop>
+  <tabstop>installedView</tabstop>
+ </tabstops>
+ <resources />
+ <connections />
+</ui>

@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<ui version="4.0">
+ <class>AboutDialog</class>
+ <widget class="QDialog" name="AboutDialog">
+  <property name="windowTitle">
+   <string>About WorkshopDL++</string>
+  </property>
+  <layout class="QVBoxLayout" name="layout">
+   <item>
+    <widget class="QLabel" name="title">
+     <property name="text">
+      <string>WorkshopDL++</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+     <property name="textFormat">
+      <enum>Qt::PlainText</enum>
+     </property>
+     <property name="font">
+      <font>
+       <bold>true</bold>
+      </font>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="details">
+     <property name="text">
+      <string>Steam Workshop downloader for Windows.
+Copyright (c) 2022-2026 noitavo.
+Licensed under CC BY-NC-SA 4.0.
+
+Uses Qt, Microsoft WebView2, and Google Material Icons.
+Thanks to imwaitingnow for maintaining WorkshopDL after my original repository and account were deleted.
+
+Not affiliated with Valve.</string>
+     </property>
+     <property name="wordWrap">
+      <bool>true</bool>
+     </property>
+     <property name="textFormat">
+      <enum>Qt::PlainText</enum>
+     </property>
+     <property name="textInteractionFlags">
+      <set>Qt::TextSelectableByMouse</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="qtVersion">
+     <property name="text">
+      <string>Qt</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="notices">
+     <property name="text">
+      <string>Licenses and notices…</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="aboutQt">
+     <property name="text">
+      <string>About &amp;Qt…</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttons">
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Close</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources />
+ <connections />
+</ui>
