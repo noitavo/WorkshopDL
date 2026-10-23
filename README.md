@@ -13,6 +13,8 @@ WorkshopDL is self contained. It stores its data beside the executable, so extra
 
 Copyright (c) 2022-2026 noitavo. [License](LICENSE): CC BY-NC-SA 4.0.
 
+<img width="1920" height="1040" alt="Workshop browser" src="https://github.com/user-attachments/assets/b0d999df-bdfb-4253-9b18-c2c0762fd357" />
+
 ---
 > [!WARNING]
 > This is the **only official repository** for **WorkshopDL**.
