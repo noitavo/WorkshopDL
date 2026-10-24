@@ -17,7 +17,7 @@ Copyright (c) 2022-2026 noitavo. [License](LICENSE): CC BY-NC-SA 4.0.
 
 ---
 > [!WARNING]
-> This is the **only official repository** for **WorkshopDL**.
+> This and the [nexusmods](https://www.nexusmods.com/site/mods/2493) page are the **only official sources** for **WorkshopDL**.
 >
 > Any third-party websites, repositories, or platforms claiming to distribute WorkshopDL are **unauthorized and are not affiliated with this project**. Such sources may distribute modified, malicious, or otherwise unsafe versions of the software.
 >
